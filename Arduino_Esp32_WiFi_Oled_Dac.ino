@@ -1,7 +1,6 @@
 #include <Wire.h>  // Only needed for Arduino 1.6.5 and earlier
 #include "SSD1306.h" // alias for `#include "SSD1306Wire.h"`
 #include "esp32-hal.h"
-#include "StackArray.h"
 
 
 
@@ -43,7 +42,7 @@ void setup() {
 
 void loop() {
   voltage = 3.3 * value/255.0;
-  int8_t pixelY = chartHeight * value/255;
+    int8_t pixelY = chartHeight * value/255;
   for(int i=80; i>=1; i--)
   {
     pixelYs[i] = pixelYs[i-1]; 
